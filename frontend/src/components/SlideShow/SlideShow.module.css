@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+  .carousel-root {
+    width: 80%;
+    margin: auto;
+  }
+
+  .carousel .slide {
+    text-align: center;
+  }
+
+  .carousel .slider-wrapper {
+    padding: 0;
+  }
+
+  .carousel .control-prev, .carousel .control-next {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-root {
+    width: 90%;
+    margin: auto;
+  }
+
+  .carousel .slide {
+    text-align: center;
+  }
+
+  .carousel .slider-wrapper {
+    padding: 0;
+  }
+
+  .carousel .control-prev, .carousel .control-next {
+    display: none;
+  }
+}

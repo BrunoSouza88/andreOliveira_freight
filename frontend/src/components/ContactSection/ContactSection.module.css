@@ -1,0 +1,21 @@
+.contactSection {
+  background: linear-gradient(to right, #32a852, #60d484);
+  color: #1E4095;
+  padding: 0.8rem;
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  };
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #1E4095;
+  border-radius: 8px;
+}
