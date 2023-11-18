@@ -11,6 +11,7 @@ const Header = () => {
             <Image src="/house-moving-truck.svg" alt="Home" width={100} height={100}/>
           </button>
         </Link>
+        <h3 className={styles.h3Name}>Andre Oliveira Frete</h3>
         <ul className={styles.navList}>
           <li>
             <Link legacyBehavior href="/#about">

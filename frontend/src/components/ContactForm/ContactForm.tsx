@@ -30,7 +30,7 @@ const ContactForm = () => {
 
 
   const generateWhatsAppLink = () => {
-    const phoneNumber = '+558186437343';
+    const phoneNumber = '+5581992820928';
     const name = encodeURIComponent(formData.name);
     const contact = encodeURIComponent(formData.email);
     const telephone = encodeURIComponent(formData.telephone);
@@ -43,27 +43,69 @@ const ContactForm = () => {
     return `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${fullMessage}`;
   };
 
+  const handleSendMessage = () => {
+    const whatsappLink = generateWhatsAppLink();
+    window.open(whatsappLink, '_blank');
+    // resetForm();
+  };
+
   return (
-    <form className={styles.contactForm}>
+    <form className={styles.contactForm} onSubmit={handleSendMessage}>
       <div className={`${styles.formGroup} ${styles.label}`}>
         <label htmlFor="name">Nome:</label>
-        <input type="text" id="name" name="name" className={styles.input} value={formData.name} onChange={handleChange} required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          className={styles.input}
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
       </div>
       <div className={`${styles.formGroup} ${styles.label}`}>
         <label htmlFor="email">E-mail:</label>
-        <input type="email" id="email" name="email" className={styles.input} value={formData.email} onChange={handleChange} required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          className={styles.input}
+          value={formData.email}
+          onChange={handleChange}/>
       </div>
       <div className={`${styles.formGroup} ${styles.label}`}>
         <label htmlFor="telephone">Telefone:</label>
-        <input type="tel" id="telephone" name="telephone" className={styles.input} value={formData.telephone} onChange={handleChange} required />
+        <input
+          type="tel" 
+          id="telephone"
+          name="telephone"
+          className={styles.input}
+          value={formData.telephone}
+          onChange={handleChange}
+          required
+        />
       </div>
       <div className={`${styles.formGroup} ${styles.label}`}>
         <label htmlFor="originAddress">Endereço de Origem:</label>
-        <input type="text" id="originAddress" name="originAddress" className={styles.input} value={formData.originAddress} onChange={handleChange} required />
+        <input
+          type="text"
+          id="originAddress"
+          name="originAddress"
+          className={styles.input}
+          value={formData.originAddress}
+          onChange={handleChange}
+        />
       </div>
       <div className={`${styles.formGroup} ${styles.label}`}>
         <label htmlFor="destinationAddress">Endereço de Destino:</label>
-        <input type="text" id="destinationAddress" name="destinationAddress" className={styles.input} value={formData.destinationAddress} onChange={handleChange} required />
+        <input
+          type="text"
+          id="destinationAddress"
+          name="destinationAddress"
+          className={styles.input}
+          value={formData.destinationAddress}
+          onChange={handleChange}
+        />
       </div>
       <div className={`${styles.formGroup} ${styles.label}`}>
         <label htmlFor="message">Mensagem:</label>
@@ -77,8 +119,11 @@ const ContactForm = () => {
           placeholder={generatePlaceholder()}
         />
       </div>
-      <a href={generateWhatsAppLink()} target="_blank" rel="noopener noreferrer">
-        <button type="button" className={styles.button}>Enviar Mensagem</button>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <button
+          type="submit"
+          className={styles.button}>Enviar Mensagem
+        </button>
       </a>
     </form>
   );

@@ -1,9 +1,13 @@
 .aboutSection {
   background: linear-gradient(to right, #4c8bf5, #88a6ff);
   color: #fff;
-  padding: 2rem;
+  padding: 4rem;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
@@ -31,4 +35,23 @@
   font-size: 1.2rem;
   line-height: 1.6;
   text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 2rem;
+  }
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .serviceList {
+    gap: 10px;
+  }
+  .serviceItem {
+    padding: 1rem;
+  }
+  .serviceItem p {
+    padding: 0.5rem;
+  }
 }
