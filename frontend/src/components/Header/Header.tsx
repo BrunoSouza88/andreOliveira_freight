@@ -1,17 +1,11 @@
 import Link from 'next/link';
 import styles from './Header.module.css';
-import Image from 'next/image';
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-      <Link legacyBehavior href="/">
-          <button className={styles.homeButton}>
-            <Image src="/house-moving-truck.svg" alt="Home" width={100} height={100}/>
-          </button>
-        </Link>
-        <h3 className={styles.h3Name}>Andre Oliveira Frete</h3>
+            <h3 className={styles.h3Name}>Andre Oliveira Frete</h3>
         <ul className={styles.navList}>
           <li>
             <Link legacyBehavior href="/#about">

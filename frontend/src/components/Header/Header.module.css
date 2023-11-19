@@ -61,7 +61,8 @@
 }
 
 .h3Name {
-  margin-right: 400px;
+  margin-right: 1200px;
+  margin-left: 100px;
 
   @media (max-width: 768px) {
     margin-right: 0;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './ScrollToTop.module.css';
+import Image from 'next/image';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,12 +29,9 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <div
-      className={`${styles.scrollToTop} ${isVisible ? styles.visible : ''}`}
-      onClick={scrollToTop}
-    >
-      <span>&uarr;</span>
-    </div>
+    <a className={`${styles.scrollToTop} ${isVisible ? styles.visible : ''}`} onClick={scrollToTop}>
+      <Image src="/house-moving-truck.svg" alt="Home" width={50} height={50} />
+    </a>
   );
 };
 
