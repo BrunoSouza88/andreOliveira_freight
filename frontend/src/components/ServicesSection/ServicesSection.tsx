@@ -1,13 +1,15 @@
-// components/ServicesSection.js
 import React, { useState } from 'react';
 import styles from './ServicesSection.module.css';
+import { services } from '../../app/utils/ServicesOffered/services';
 
 const ServicesSection = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [serviceInfo, setServiceInfo] = useState<{ title: string, description: string } | null>(null);
 
-  const openModal = (service: string) => {
-    setSelectedService(service);
+  const openModal = (service: { title: string, description: string }) => {
+    setSelectedService(service.title);
+    setServiceInfo(service);
     setShowModal(true);
   };
 
@@ -20,18 +22,12 @@ const ServicesSection = () => {
       <div className={styles.container}>
         <h2 className={styles.sectionTitle}>Nossos Serviços</h2>
         <div className={styles.serviceList}>
-          <div className={styles.serviceItem} onClick={() => openModal('Serviço Local')}>
-            <h3>Serviço Local</h3>
-            <p>Transporte de carga dentro da região local.</p>
-          </div>
-          <div className={styles.serviceItem} onClick={() => openModal('Serviço Interestadual')}>
-            <h3>Serviço Interestadual</h3>
-            <p>Transporte de carga entre estados.</p>
-          </div>
-          <div className={styles.serviceItem} onClick={() => openModal('Serviço Internacional')}>
-            <h3>Serviço Internacional</h3>
-            <p>Transporte de carga para destinos internacionais.</p>
-          </div>
+          {services.map((service, index) => (
+            <div key={index} className={styles.serviceItem} onClick={() => openModal(service)}>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -41,8 +37,8 @@ const ServicesSection = () => {
             <span className={styles.closeButton} onClick={closeModal}>
               &times;
             </span>
-            <h2>{selectedService}</h2>
-            <p>Aqui ficam mais informações acerca do serviço.</p>
+            <h2 className={styles.h2Service}>{selectedService}</h2>
+            <p className={styles.pService}>{serviceInfo?.description}</p>
           </div>
         </div>
       )}

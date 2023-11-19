@@ -1,6 +1,6 @@
 .header {
   background: linear-gradient(to right, #1E4095, #1F77D0);
-  color: #fff;
+  color: #ffff;
   margin: 0;
   padding: 1rem;
   width: 100%;
@@ -22,28 +22,6 @@
 .nav {
   display: flex;
   align-items: center;
-}
-
-.homeButton {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 600px;
-  margin-left: 150px;
-  animation: driveAnimation 1.5s infinite;
-
-
-  @media (max-width: 768px) {
-    margin: 0 auto;
-    margin-right: 0;
-    margin-left: 10px;
-  }
-}
-
-.homeButton img {
-  width: 75px;
-  height: auto;
-  color: white;
 }
 
 .navList {

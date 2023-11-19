@@ -19,7 +19,7 @@ const Header = () => {
           </li>
           <li>
             <Link legacyBehavior href="/#contact">
-              <a>Contato</a>
+              <a>Orçamento</a>
             </Link>
           </li>
         </ul>
