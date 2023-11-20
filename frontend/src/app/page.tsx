@@ -19,8 +19,6 @@ const Page = () => {
   useEffect(() => {
     const fetchSlideshowData = async () => {
       try {
-        console.log(slideshow);
-        
         setSlideshowData(slideshow);
       } catch (error) {
         

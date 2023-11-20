@@ -1,3 +1,10 @@
+.image {
+  width: 400px;
+  height: 800px;
+  object-fit: contain;
+  
+} 
+
 @media (max-width: 768px) {
   .carousel-root {
     width: 80%;

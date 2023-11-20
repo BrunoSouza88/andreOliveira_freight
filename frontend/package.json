@@ -13,6 +13,7 @@
     "react": "^18",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18",
+    "react-image": "^4.1.0",
     "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
