@@ -6,6 +6,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './SlideShow.module.css';
 
 const Slideshow: React.FC<SlideshowProps> = ({ slideshowData }) => {
+  if (!slideshowData || slideshowData.length === 0) {
+    return null;
+  }
+
   return (
     <Carousel autoPlay interval={3000} transitionTime={1000} infiniteLoop showThumbs={false} className={styles.carousel}>
       {slideshowData.map((slide) => (
